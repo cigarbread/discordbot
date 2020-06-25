@@ -1,4 +1,6 @@
 import discord
+import os
+
 
 client = discord.Client()
 
@@ -25,8 +27,8 @@ async def on_message(message):
         await message.channel.send("2020년 4월 1일에 시작한 서버로, 잔납님이 오너이십니다!!")
 
 
-
-client.run("NzI1MzkyNDU3ODMwODkxNjIy.XvOLxg.cnd4qx-im2yJHdlq5LJw9v_n89o")
+access_token = os.environ["BOT_TOKEN"]
+client.run("access_token")
 
 
 
